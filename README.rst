@@ -15,10 +15,12 @@ Description
 
 install
 =======
-::
+
 
 git pull
+
 python setup.py build sdist
+
 python setup.py install
 
 webassit -h 查看命令
