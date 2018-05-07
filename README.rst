@@ -3,17 +3,18 @@ mw-web-assit
 ============
 
 
-Add a short description here!
+web代码助手，根据设计文档产生web代码
+
 
 
 Description
 ===========
 
-A longer description of your project goes here...
+1.根据swagger产生api.js 文件
+2.todo 产生vue template
 
 
 Note
 ====
 
-This project has been set up using PyScaffold 3.0.3. For details and usage
-information on PyScaffold see http://pyscaffold.org/.
+

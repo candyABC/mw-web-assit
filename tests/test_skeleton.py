@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from mw_web_assit.skeleton import fib
+from src.mw_web_assit.skeleton import fib
 
 __author__ = "candyabc"
 __copyright__ = "candyabc"

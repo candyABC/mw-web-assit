@@ -1,0 +1,1049 @@
+########################################
+# create by :cxh-PC
+# create time :2018-02-05 15:39:52.768061
+########################################
+swagger: "2.0"
+info:
+  description: ""
+  version: v1.0
+  title: gongdi_mng
+#
+basePath: /gongdi_mng/v1.0
+tags:
+- name: emp_illegalmng
+  description: ""
+- name: subcon_illegalmng
+  description: ""
+- name: illegal_categorymng
+  description: ""
+- name: illegal_typemng
+  description: ""
+- name: subcontractormng
+  description: ""
+- name: illegal_picmng
+  description: ""
+schemes:
+- http
+- https
+paths:
+  /emp_illegals:
+    get:
+      tags:
+      - emp_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.emp_illegalmng.emp_illegals_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: page
+          description: ""
+          required: False
+          type: integer
+          format: int32
+        - in: query
+          name: per_page
+          description: ""
+          required: False
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/emp_illegal"
+    post:
+      tags:
+      - emp_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.emp_illegalmng.emp_illegals_post
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/emp_illegal"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/emp_illegal"
+  /emp_illegals/{id}:
+    get:
+      tags:
+      - emp_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.emp_illegalmng.emp_illegals_id_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            $ref: "#/definitions/emp_illegal"
+    put:
+      tags:
+      - emp_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.emp_illegalmng.emp_illegals_id_put
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/emp_illegal"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/emp_illegal"
+    delete:
+      tags:
+      - emp_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.emp_illegalmng.emp_illegals_id_delete
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        204:
+          description: ""
+          schema:
+            $ref: "#/definitions/emp_illegal"
+  /illegal_categorys:
+    get:
+      tags:
+      - illegal_categorymng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.illegal_categorymng.illegal_categorys_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: ""
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/illegal_category"
+    post:
+      tags:
+      - illegal_categorymng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.illegal_categorymng.illegal_categorys_post
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/illegal_category"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_category"
+  /illegal_categorys/{id}:
+    get:
+      tags:
+      - illegal_categorymng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.illegal_categorymng.illegal_categorys_id_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_category"
+    put:
+      tags:
+      - illegal_categorymng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.illegal_categorymng.illegal_categorys_id_put
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/illegal_category"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_category"
+    delete:
+      tags:
+      - illegal_categorymng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.illegal_categorymng.illegal_categorys_id_delete
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        204:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_category"
+  /illegal_pics:
+    post:
+      tags:
+      - illegal_picmng
+      summary: "上传图片
+"
+      description: "生成图片记录，图片压缩成了500*450大小"
+      operationId: app.api.v1_0.illegal_picmng.illegal_pics_post
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+        - application/x-www-form-urlencoded
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: pic
+          description: ""
+          required: True
+          type: file
+        - in: formData
+          name: illegalid
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        201:
+          description: ""
+          schema:
+            type: string
+  /illegal_pics/{id}:
+    get:
+      tags:
+      - illegal_picmng
+      summary: "下载图片
+"
+      description: "下载图片文件"
+      operationId: app.api.v1_0.illegal_picmng.illegal_pics_id_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_pic"
+    delete:
+      tags:
+      - illegal_picmng
+      summary: "删除违规照片"
+      description: ""
+      operationId: app.api.v1_0.illegal_picmng.illegal_pics_id_delete
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        204:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_pic"
+  /illegal/{id}/pics:
+    get:
+      tags:
+      - illegal_picmng
+      summary: "获取违规照片
+"
+      description: "获取某违规下的所有照片信息"
+      operationId: app.api.v1_0.illegal_picmng.illegal_id_pics_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: "违规记录的id"
+          required: True
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/illegal_pic"
+  /illegal_categorys/{id}/types:
+    get:
+      tags:
+      - illegal_typemng
+      summary: "获取违规类别下违规类型"
+      description: ""
+      operationId: app.api.v1_0.illegal_typemng.illegal_categorys_id_types_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: "违规类别id"
+          required: True
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/illegal_type"
+  /illegal_types:
+    post:
+      tags:
+      - illegal_typemng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.illegal_typemng.illegal_types_post
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/illegal_type"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_type"
+  /illegal_types/{id}:
+    get:
+      tags:
+      - illegal_typemng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.illegal_typemng.illegal_types_id_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_type"
+    put:
+      tags:
+      - illegal_typemng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.illegal_typemng.illegal_types_id_put
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/illegal_type"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_type"
+    delete:
+      tags:
+      - illegal_typemng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.illegal_typemng.illegal_types_id_delete
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        204:
+          description: ""
+          schema:
+            $ref: "#/definitions/illegal_type"
+  /subcon_illegals:
+    get:
+      tags:
+      - subcon_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.subcon_illegalmng.subcon_illegals_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: page
+          description: ""
+          required: False
+          type: integer
+          format: int32
+        - in: query
+          name: per_page
+          description: ""
+          required: False
+          type: integer
+          format: int32
+        - in: query
+          name: auditing_status
+          description: "审核状态
+0：未审核
+1：审核通过
+2：审核未通过"
+          required: False
+          type: integer
+          format: int32
+        - in: query
+          name: subcon_name
+          description: "分包商名称
+分包商公司名称"
+          required: False
+          type: string
+        - in: query
+          name: illegal_typeid
+          description: "违规类型"
+          required: False
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/subcon_illegal"
+    post:
+      tags:
+      - subcon_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.subcon_illegalmng.subcon_illegals_post
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/subcon_illegal"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/subcon_illegal"
+  /subcon_illegals/{id}:
+    get:
+      tags:
+      - subcon_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.subcon_illegalmng.subcon_illegals_id_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            $ref: "#/definitions/subcon_illegal"
+    put:
+      tags:
+      - subcon_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.subcon_illegalmng.subcon_illegals_id_put
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/subcon_illegal"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/subcon_illegal"
+    delete:
+      tags:
+      - subcon_illegalmng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.subcon_illegalmng.subcon_illegals_id_delete
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        204:
+          description: ""
+          schema:
+            $ref: "#/definitions/subcon_illegal"
+  /subcontractors:
+    get:
+      tags:
+      - subcontractormng
+      summary: "工地下的分包商
+"
+      description: "需根据授权公司过滤"
+      operationId: app.api.v1_0.subcontractormng.subcontractors_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: page
+          description: ""
+          required: False
+          type: integer
+          format: int32
+        - in: query
+          name: per_page
+          description: ""
+          required: False
+          type: integer
+          format: int32
+        - in: query
+          name: comp_name
+          description: ""
+          required: False
+          type: string
+        - in: query
+          name: manager
+          description: ""
+          required: False
+          type: string
+      responses:
+        200:
+          description: ""
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/subcontractor"
+    post:
+      tags:
+      - subcontractormng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.subcontractormng.subcontractors_post
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/subcontractor"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/subcontractor"
+  /subcontractors/{id}:
+    get:
+      tags:
+      - subcontractormng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.subcontractormng.subcontractors_id_get
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: ""
+          schema:
+            $ref: "#/definitions/subcontractor"
+    put:
+      tags:
+      - subcontractormng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.subcontractormng.subcontractors_id_put
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+        - in: body
+          name: body
+          description: ""
+          required: True
+          schema:
+            $ref: "#/definitions/subcontractor"
+      responses:
+        201:
+          description: ""
+          schema:
+            $ref: "#/definitions/subcontractor"
+    delete:
+      tags:
+      - subcontractormng
+      summary: ""
+      description: ""
+      operationId: app.api.v1_0.subcontractormng.subcontractors_id_delete
+      schemes:
+        - http
+        - https
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ""
+          required: True
+          type: integer
+          format: int32
+      responses:
+        204:
+          description: ""
+          schema:
+            $ref: "#/definitions/subcontractor"
+definitions:
+  emp_illegal:
+    type: object
+    description: "None"
+    properties:
+      id:
+        description: ""
+        type: integer
+        format: int32
+      illegal_time:
+        description: "违规时间"
+        type: string
+        format: date-time
+      rectify_time:
+        description: "整改时间"
+        type: string
+        format: date-time
+      memo:
+        description: "违规明细"
+        type: string
+      recorder:
+        description: "记录员"
+        type: string
+      auditing_status:
+        description: "审核状态
+0：未审核
+1：审核通过
+2：审核未通过"
+        type: integer
+        format: int32
+      rectify_empid:
+        description: ""
+        type: integer
+        format: int32
+      illegal_typeid:
+        description: ""
+        type: integer
+        format: int32
+      companyid:
+        description: ""
+        type: integer
+        format: int32
+      illegal_empid:
+        description: ""
+        type: integer
+        format: int32
+  subcon_illegal:
+    type: object
+    description: "None"
+    properties:
+      id:
+        description: ""
+        type: integer
+        format: int32
+      illegal_time:
+        description: "违规时间"
+        type: string
+        format: date-time
+      rectify_time:
+        description: "整改时间"
+        type: string
+        format: date-time
+      memo:
+        description: "违规明细"
+        type: string
+      recorder:
+        description: "记录员"
+        type: string
+      id:
+        description: ""
+        type: integer
+        format: int32
+      auditing_status:
+        description: "审核状态
+0：未审核
+1：审核通过
+2：审核未通过"
+        type: integer
+        format: int32
+      rectify_empid:
+        description: ""
+        type: integer
+        format: int32
+      rectify_emp_name:
+        description: ""
+        type: string
+      illegal_typeid:
+        description: ""
+        type: integer
+        format: int32
+      illegal_type_memo:
+        description: "违规类型"
+        type: string
+      companyid:
+        description: ""
+        type: integer
+        format: int32
+      subcontractorid:
+        description: ""
+        type: integer
+        format: int32
+      subcon_com_name:
+        description: "分包商公司名"
+        type: string
+  illegal_category:
+    type: object
+    description: "None"
+    properties:
+      id:
+        description: ""
+        type: integer
+        format: int32
+      name:
+        description: "违规类别"
+        type: string
+  illegal_type:
+    type: object
+    description: "None"
+    properties:
+      id:
+        description: ""
+        type: integer
+        format: int32
+      name:
+        description: "违规类型"
+        type: string
+      illegal_categoryid:
+        description: ""
+        type: integer
+        format: int32
+      illegal_category_name:
+        description: "违规类别名称"
+        type: string
+  subcontractor:
+    type: object
+    description: "None"
+    properties:
+      id:
+        description: ""
+        type: integer
+        format: int32
+      comp_name:
+        description: "公司名称"
+        type: string
+      tel:
+        description: "电话"
+        type: string
+      manager:
+        description: "负责人"
+        type: string
+      license:
+        description: "营业执照"
+        type: string
+      email:
+        description: "邮件"
+        type: string
+      approach_date:
+        description: "进场日期"
+        type: string
+        format: date
+      departure_date:
+        description: "离场日期"
+        type: string
+        format: date
+      companyid:
+        description: "所属公司id"
+        type: integer
+        format: int32
+  illegal_pic:
+    type: object
+    description: "None"
+    properties:
+      file_name:
+        description: ""
+        type: string
+      id:
+        description: ""
+        type: integer
+        format: int32
+      pic_size:
+        description: ""
+        type: number
+        format: double
+      illegalid:
+        description: ""
+        type: integer
+        format: int32
