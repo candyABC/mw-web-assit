@@ -1,6 +1,6 @@
 import click
 from click import command
-from mw_web_assit import __version__,ApiMethods
+from mw_web_assit import __version__,ApiMethods,SwaggerHelper
 import sys
 
 
@@ -23,13 +23,16 @@ def cli():
 
 @cli.command()
 @click.argument('infile','swagger yml/json file')
-@click.argument('outfile','产生的js api 文件')
-def genapi(infile,outfile):
+@click.argument('outpath','产生的js api 及 assit 文件的目录')
+@click.argument('name','文件名')
+def gen(infile,outpath,name):
     '''
      web代码助手，根据设计文档产生web代码，eg.根据swagger产生api.js
     '''
-    api = ApiMethods()
-    api.parse(infile, outfile)
+
+    helper =SwaggerHelper(infile)
+    helper.gen(outpath,name)
+
 
 if __name__ =='__main__':
     cli()

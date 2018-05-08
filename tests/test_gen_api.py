@@ -1,8 +1,9 @@
 import pytest
-from src.mw_web_assit.gen_api import ApiMethods
+from src.mw_web_assit.swagger_helper import SwaggerHelper
 
 def test_gen_api():
-    api =ApiMethods()
-    api.parse('./files/gongdi_mng.yaml','./files/gongdi_mng.js')
+
+    helper =SwaggerHelper('./files/gongdi_mng.yaml')
+    helper.gen('./files/','gongdi')
 
 test_gen_api()

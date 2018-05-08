@@ -914,6 +914,7 @@ definitions:
         description: ""
         type: integer
         format: int32
+        required: true
       illegal_time:
         description: "违规时间"
         type: string

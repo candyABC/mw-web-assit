@@ -9,5 +9,5 @@
 #     __version__ = 'unknown'
 
 __version__='0.0.1'
-from .gen_api import ApiMethods
+from .swagger_helper import ApiMethods,SwaggerHelper
 

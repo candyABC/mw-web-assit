@@ -10,8 +10,8 @@ web代码助手，根据设计文档产生web代码
 Description
 ===========
 
-1.根据swagger产生api.js 文件
-2.todo 产生vue template
+- 1.根据swagger产生api.js 文件
+- 2.todo 产生vue template
 
 install
 =======

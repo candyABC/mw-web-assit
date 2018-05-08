@@ -14,3 +14,7 @@ templateEnv.lstrip_blocks = True
 def api_js(apiMethods):
     t = templateEnv.get_template('api_js.tpl')
     return t.render(apimethods =apiMethods)
+
+def class_assit(objects):
+    t = templateEnv.get_template('class_assit.tpl')
+    return t.render(objects =objects)
