@@ -1,5 +1,5 @@
 import yaml,os
-from .templates import api_js,class_assit
+from .templates import api_js,class_assit,api_v2
 def read_swagger(filename):
     with open(filename,encoding='utf-8') as f:
         return yaml.load(f)
@@ -9,8 +9,10 @@ class ApiMethod():
         self.name =name
         self.opId =opId
         self.uri =uri
+        self.summary =''
         # self.method =method
         self.params =params or []
+        self.pathArgs=''
         self.parseArgs()
         # self.queryParams =[]
         # self.dataParams = []
@@ -28,11 +30,9 @@ class ApiMethod():
         else:
             return 0
 
-
-
     def parseArgs(self):
         # 仅对 param in 是 path,query的做处理,required =false 的设定null
-        args=','.join([param["name"] for param in self.params if param.get("in") =='path'])
+        self.pathArgs=args=','.join([param["name"] for param in self.params if param.get("in") =='path'])
         self.queryParams =[param for param in self.params if param.get("in") =='query']
         self.dataParams =[param for param in self.params if param.get("in") in("body","formData","file")]
 
@@ -44,7 +44,6 @@ class ApiMethod():
             if len(args)>0:
                 args+=','
             args+= 'dataParam'
-
 
         self.paramArgs =args
 
@@ -85,6 +84,7 @@ class SwObject():
         self.name =name
         self.description=description
         self.props =[]
+
     def createProp(self,name,xtype,description,default):
         return self.props.append(SwProp(name,xtype,description,default))
 
@@ -117,8 +117,10 @@ class SwaggerHelper():
             if obj.get('properties'):
                 swobj =SwObject(name,obj.get('description'))
                 for propname,prop in obj.get('properties').items():
-                # if not prop.get('required', False):
-                #     continue
+                    isRequired =prop.get('required', False) or propname in obj.get('required',[])
+                    if not isRequired:
+                        continue
+
                     swobj.createProp(propname,
                                  (prop['type'],prop.get('format')),
                                  prop.get('description',''),
@@ -132,7 +134,7 @@ class SwaggerHelper():
     def genApi(self,outFile):
         apimethods =ApiMethods()
         apimethods.parse(self.swagger)
-        save_file(api_js(apimethods), outFile)
+        save_file(api_v2(apimethods), outFile)
 
     def gen(self,outpath,name):
         self.genApi(os.path.join(outpath,'%s_api.js' % name))

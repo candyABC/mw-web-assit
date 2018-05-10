@@ -10,7 +10,7 @@ export class {{ object.name|capitalize }}Assit{
         {% for prop in object.props %}
         {{ prop.name }}:[
             {required: true,{% if prop.ruleType %}type:'{{ prop.ruleType}}',{% endif %} message: '{{ prop.description }}', trigger: 'blur'},
-            {required: true,{% if prop.ruleType %}type:'{{ prop.ruleType}}',{% endif %} message: '{{ prop.description }}', trigger: 'change'}]
+            {required: true,{% if prop.ruleType %}type:'{{ prop.ruleType}}',{% endif %} message: '{{ prop.description }}', trigger: 'change'}],
         {% endfor %}
       }
     }
