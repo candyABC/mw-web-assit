@@ -14,4 +14,5 @@ export class {{ object.name|capitalize }}Assit{
         {% endfor %}
       }
     }
+}
 {% endfor %}

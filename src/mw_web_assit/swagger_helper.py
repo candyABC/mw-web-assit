@@ -114,17 +114,17 @@ class SwaggerHelper():
         objects =[]
         #get definiations
         for name,obj in self.swagger.get("definitions").items():
-
-            swobj =SwObject(name,obj.get('description'))
-            for propname,prop in obj.get('properties').items():
+            if obj.get('properties'):
+                swobj =SwObject(name,obj.get('description'))
+                for propname,prop in obj.get('properties').items():
                 # if not prop.get('required', False):
                 #     continue
-                swobj.createProp(propname,
+                    swobj.createProp(propname,
                                  (prop['type'],prop.get('format')),
                                  prop.get('description',''),
                                  prop.get('default'))
                 # swprop.isRequired = prop.get('required',False)
-            objects.append(swobj)
+                objects.append(swobj)
         #todo: get query for each path
         save_file(class_assit(objects), outFile)
         # return objects
