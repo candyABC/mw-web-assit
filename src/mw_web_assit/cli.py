@@ -22,9 +22,9 @@ def cli():
 
 
 @cli.command()
-@click.argument('infile','swagger yml/json file')
-@click.argument('outpath','产生的js api 及 assit 文件的目录')
-@click.argument('name','文件名')
+@click.argument('infile',help='swagger yml/json file')
+@click.argument('outpath',help='产生的js api 及 assit 文件的目录,assit文件用于检查form的validate')
+@click.argument('name',help='产生的文件的文件名前缀,eg. name_api.js,name_assit.js')
 def gen(infile,outpath,name):
     '''
      web代码助手，根据设计文档产生web代码，eg.根据swagger产生api.js
